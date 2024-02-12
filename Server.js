@@ -56,7 +56,7 @@ app.post('/send-email', async (req, res) => {
     try {
         // Sending the email
         await transporter.sendMail({
-            from: `"CoCreateLabs" <${process.env.EMAIL_USER}>`,
+            from: "CoCreateLabs",
             to: process.env.EMAIL_RECIPIENT, // Use environment variable for recipient
             subject: "New Opportunity",
             html: template,
